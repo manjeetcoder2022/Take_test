@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKE TEST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+</head>
+<body>
+   <nav class="navbar-inverse my_nav">
+    <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#list">
+
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand"> <img src="logo.jpg" id="logo">TAKE TEST</a>
+        
+    </div>
+    <div class="collapse navbar-collapse" id="list">
+        <ul class="nav navbar-nav">
+            <li><a href='#home'>Home</a></li>
+            <li><a href='#about'>About</a></li>
+            <li><a href='#contact'>Contact</a></li>
+        </ul>
+    </div>
+   </nav>
+
+  <div id="home" class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+    <h1>TAKE TEST <br>
+        <span id="text_1">Platform where Teacher take test of student and <br> Student and teacher intrect to each other</sapn>
+    </h1>
+    
+    <center>
+    <div id="register_page">
+
+        <span>NAME : </span> <input type="text" id="register_user_name" placeholder="Enter your name"> <br> <br>
+        <span>PASSWORD : </span> <input type="password" id="register_password" placeholder="Enter your name"> <br> <br>
+        <span>MOBILE NUMBER : </span> <input type="number" id="register_mobile_number" placeholder="Enter your name"> <br> <br>
+    
+        <label > Select you Category</label>
+<select name="category" id="category">
+	<option value="none" selected>Category</option>
+	<option value="student">Student</option>
+	<option value="teacher">Teacher</option>
+</center>
+</select> <br> <br>
+<button class="btn btn-info" onclick="Register()">Register</button> <br> <br>
+<a class="button" onclick="goToLoginPage()">Login</a>
+    </div>
+<center>
+
+
+<div id="login_page">
+    <span>Name : </span> <input type="text" id="login_user_name"> <br> <br>
+    <span>Pasword : </span> <input type="password" id="login_password"> <br> <br>
+    <button class="btn btn-info" onclick="login()">Login</button> <br> <br>
+    <p id="output"></p>
+    <a class="button" onclick="goToRegisterPage()">Register</a>
+</div> 
+
+</center>
+</div>
+
+<center>
+<div id="about" >
+
+    <img src="online_test.jpg"> 
+
+    <div class="about_content">
+    <h1>ABOUT US</h1>
+
+   <p>This is best Website where Teacher take test of many student.
+     Teacher also solve his/her doubt by chatting with Student. 
+     Teacher ask any question to Student. </p>
+  
+</div>
+</div>
+</center>
+<center>
+  
+    <footer id="contact" class="center">
+        <h1 id="text_2">CONTACT </h1>
+       
+        <i class="fa fa-envelope"> </i>
+        <h3> for any queries contect me : 
+        <a href="mailto:manjeeetk1@gmail.com">
+          manjeeetk1@gmail.com </h3>
+        </a>
+       
+      </footer>
+
+</center>
+<p id="check_present"></p>
+<script src="main.js"></script>
+</body>
+</html>

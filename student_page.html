@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT</title>
+    <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+</head>
+<body>
+    <nav class="navbar-inverse my_nav">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#list">
+    
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"> <img src="logo.jpg" id="logo">TAKE TEST</a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="list">
+            <ul class="nav navbar-nav">
+                <li><a href='#dashboard'>Dashboard</a></li>
+                <li><a href='#Test'>Test</a></li>
+                <li><a href='#Result'>Result</a></li>
+                <li><a href='#Teacher'>Chat to Teacher</a></li>
+            </ul>
+        </div>
+       </nav>
+    <div id="container">
+    
+        <center>
+<div id="dashboard">
+    <span id="welcome">Welcome</span>  <h3 id="user_name"></h3>
+    <br> <span id="text_1">Student</span>
+    <table id="first" >
+        <tr><th class="display_teacher_detail">Your Teacher Name </th>
+            <th class="display_teacher_detail">Subject Name </th>
+        </tr>
+        <tr><td id="teacher_name_display">You are not add in any Teacher group</td> 
+            <td id="teacher_sub_display">-</td>
+            </tr>
+            </table><br> <br>
+            <table> 
+                <tr>
+                   <th>Number Of test assigned to you</th>
+                </tr>
+                <tr>
+                    <td id="test_number">0</td>
+                </tr>
+            </table>
+            <h3 id="Test">Test</h3>
+            <img id="live_test" src="test_links.jpg">
+            <div id="live_test_div_">Currenty No test</div>
+<div id="live_test_div"> </div>
+<h3 id="status"></h3>
+    <div id="displayQuestion"><b></b></div>
+    <div id="all_question">
+    <h3 id="status"> </h3>
+    <h4 id="ques_1"></h4>
+    <h4 id="ques_2"></h4>
+    <h4 id="ques_3"></h4>
+    <h4 id="ques_4"></h4>
+
+    <h4 id="ques_5"></h4>
+    <h4 id="ques_6"></h4>
+    <h4 id="ques_7"></h4>
+    <h4 id="ques_8"></h4>
+    <h4 id="ques_9"></h4>
+    <h4 id="ques_10"></h4>
+    <button onclick="Submit()" class="btn btn-success" id="submit">Submit</button> <br> <br>
+    <h3 id="complted_test"></h3>
+</div>
+</div>
+<p id="demo_1"></p>
+   
+    <button onclick="result()" class="btn btn-info" id="result">Result </button>
+    <p id=""></p>
+   
+    
+
+   <h3 id="Result_2">Result</h3>
+<div id="Result">
+
+</div>
+<div id="display_answer"></div>
+<p id="display_error"></p>
+<h3 id="Teacher">Chat to Teacher</h3>
+
+ <button onclick="chat()" class="btn btn-success">Chat to Teacher</button>
+<div id="chat_div">
+    <h3 id="display_teacher_name"></h3>
+    <div id="display_chat">
+        
+    </div>        
+   
+</div>
+<div id="component"><input placeholder="Enter your text" id="msg"><button onclick="send()" class="btn btn-info" id="send">Send</button> </div> 
+
+
+<div id="display_msg"></div>
+</center>
+</div>
+    <script src="student.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEACHER</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link rel="stylesheet" href="teacher.css">
+    <style>
+       
+    </style>
+</head>
+<body style="background-color: skyblue !important;">
+    <nav class="navbar-inverse my_nav">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#list">
+    
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"> <img src="logo.jpg" id="logo">TAKE TEST</a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="list">
+            <ul class="nav navbar-nav">
+                <li><a href='#Dashboard'>Dashboard</a></li>
+                <li><a href='#test_2'>Take test</a></li>
+                <li><a href='#answers'>Check answers</a></li>
+                <li><a href='#quiers_'>Student queries</a></li>
+            </ul>
+        </div>
+       </nav>
+    <div id="container">
+    <center>
+       <div id="Dashboard">
+        <span id="welcome">Welcome</span>  <h3 id="user_name"></h3>
+        <br> <span id="text_1">Teacher</span>
+   <!-- <img src="teacher_image.png"> -->
+<button onclick="myStudent()" id="my">CH</button>
+   <p id="output"></p>
+   <div id="show_final_student">
+    <h3 id="display_add">No Student Add</h3>
+
+    <table id="table_2">
+        <tr>
+            <th>NAME</th>
+            <th>MOBILE NUMBER</th>
+        </tr>
+        <tr>
+            <td id="my_1_name"></td>
+            <td id="my_1_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_2_name"></td>
+            <td id="my_2_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_3_name"></td>
+            <td id="my_3_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_4_name"></td>
+            <td id="my_4_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_5_name"></td>
+            <td id="my_5_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_6_name"></td>
+            <td id="my_6_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_7_name"></td>
+            <td id="my_7_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_8_name"></td>
+            <td id="my_8_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_9_name"></td>
+            <td id="my_9_mob"></td>
+        </tr>
+        <tr>
+            <td id="my_10_name"></td>
+            <td id="my_10_mob"></td>
+        </tr>
+    </table>
+    </div>
+<br> <br>
+
+
+    <button onclick="openAddStudent()" class="btn btn-success" id="button_1">ADD STUDENT </button>
+    <div id="chart_add_student">
+        <span id="sub_text">Enter your Subject</span><input id="sub_name"> <br> <br>
+    <span> <b>Enter all student details  </b></span> <br> <br>
+   <span><b>1 -</b> </span> <input id="name_1" placeholder="Enter student name"> <br> <input id="mob_1" placeholder="enter student mobile number"> <hr>
+   <span><b>2 -</b> </span>  <input id="name_2" placeholder="Enter student name"> <br> <input id="mob_2" placeholder="Enter student mobile number"> <hr>
+   <span><b>3 -</b> </span> <input id="name_3" placeholder="Enter student name"> <br> <input id="mob_3" placeholder="Enter student mobile number"> <hr>
+   <span><b>4 -</b> </span> <input id="name_4" placeholder="Enter student name"> <br> <input id="mob_4" placeholder="Enter student mobile number"> <hr>
+   <span><b>5 -</b> </span> <input id="name_5" placeholder="Enter student name"> <br> <input id="mob_5" placeholder="Enter student mobile number"> <hr>
+   <span><b>6 -</b> </span> <input id="name_6" placeholder="Enter student name"> <br> <input id="mob_6" placeholder="Enter student mobile number"> <hr>
+   <span><b>7 -</b> </span>  <input id="name_7" placeholder="Enter student name"> <br> <input id="mob_7" placeholder="Enter student mobile number"> <hr>
+   <span><b>8 -</b> </span> <input id="name_8" placeholder="Enter student name"> <br> <input id="mob_8" placeholder="Enter student mobile number"> <hr>
+   <span><b>9 -</b> </span> <input id="name_9" placeholder="Enter student name"> <br> <input id="mob_9" placeholder="Enter student mobile number"> <hr>
+   <span><b>10 -</b> </span>  <input id="name_10" placeholder="Enter student name"> <br> <input id="mob_10" placeholder="Enter student mobile number"> <hr>
+    <button onclick="addStudent()"class=" btn btn-info">UPDATE</button> <br> <br>
+
+    <div id="showStudent">
+ 
+        <table id="table">
+            <tr>
+                <th>NAME</th>
+                <th>MOBILE NUMBER</th>
+            </tr>
+            <tr>
+                <td id="name_1_show"></td>
+                <td id="mob_1_show"></td>
+            </tr>
+
+            <tr>
+                <td id="name_2_show"></td>
+                <td id="mob_2_show"></td>
+            </tr>
+
+            <tr>
+                <td id="name_3_show"></td>
+                <td id="mob_3_show"></td>
+            </tr>
+
+            <tr>
+                <td id="name_4_show"></td>
+                <td id="mob_4_show"></td>
+            </tr>
+
+            <tr>
+                <td id="name_5_show"></td>
+                <td id="mob_5_show"></td>
+            </tr>
+
+            <tr>
+                <td id="name_6_show"></td>
+                <td id="mob_6_show"></td>
+            </tr>
+
+            <tr>
+                <td id="name_7_show"></td>
+                <td id="mob_7_show"></td>
+            </tr>
+            <tr>
+                <td id="name_8_show"></td>
+                <td id="mob_8_show"></td>
+            </tr>
+            <tr>
+                <td id="name_9_show"></td>
+                <td id="mob_9_show"></td>
+            </tr>
+            <tr>
+                <td id="name_10_show"></td>
+                <td id="mob_10_show"></td>
+            </tr> 
+        </table><br> <br>
+        <button onclick="submit()" class="btn btn-info" id="save">Save student </button>
+        <br> <br>
+    </div>
+</div> <br> <br>
+
+
+
+
+
+
+</div>
+<h3 id="test_2">TAKING TEST </h3>
+ <button  data-toggle="modal" data-target="#first" id="test"> <img src="test_links.jpg"></button>
+<div class="modal fade" id="first">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					
+					<h1 class="modal-title">TAKING TEST</h1>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<h5 class="btn-danger">Not Enter Space in Test Name</h5>
+					<h5 class="btn-danger">Enter Questions</h5>
+                    <span> Test Name</span><input id="test_name"> <br><br>
+					<span>Questions 1</span><input id="ques_1"> <br><br>
+                    <span>Questions 2</span><input id="ques_2"><br><br>
+                    <span>Questions 3</span><input id="ques_3"><br><br>
+                    <span>Questions 4</span><input id="ques_4"><br><br>
+                    <span>Questions 5</span><input id="ques_5"><br><br>
+                    <span>Questions 6</span><input id="ques_6"><br><br>
+                    <span>Questions 7</span><input id="ques_7"><br><br>
+                    <span>Questions 8</span><input id="ques_8"><br><br>
+                    <span>Questions 9</span><input id="ques_9"><br><br>
+
+                    <span>Questions 10</span><input id="ques_10"><br><br>
+                    
+                <button onclick="send_to_student()" class="btn btn-info">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <h3 id="answers">CHECKING ANSWER </h3> 
+    <button onclick="getAnswer()"  id="getAnswer"><img src="answer.jpg"></button><br> <br>
+    <div id="display_answer_button"></div>
+    <div id="display_answer"></div>
+    <div id="display_answer_1"></div>
+    <div id="display_answer_1_status"><hr></div> 
+    <div id="display_answer_2"></div>
+    <div id="display_answer_2_status"><hr> </div>
+    <div id="display_answer_3"></div>
+    <div id="display_answer_3_status"><hr></div>
+    <div id="display_answer_4"></div>
+    <div id="display_answer_4_status"><hr></div>
+    <div id="display_answer_5"></div>
+    <div id="display_answer_5_status"><hr></div>
+    <div id="display_answer_6"></div>
+    <div id="display_answer_6_status"><hr></div>
+    <div id="display_answer_7"></div>
+    <div id="display_answer_7_status"><hr></div>
+    <div id="display_answer_8"></div>
+    <div id="display_answer_8_status"><hr></div>
+    <div id="display_answer_9"></div>
+    <div id="display_answer_9_status"><hr></div>
+    <div id="display_answer_10"></div>
+    <div id="display_answer_10_status"><hr></div>
+    <h3 id="quiers_">Student Queries</h3>
+<br> <br>    <button onclick="chat()" class="btn btn-success" id="quiers" >Show Quires</button> <br> <br>
+</center>
+<center>
+
+    <div id="chat_display">Select student</div>
+    <div id="chat_div">
+        <h3 id="display_teacher_name"></h3>
+        
+        <div id="display_chat">
+            <h3>No chat</h3>
+        </div>        
+    
+    </div>
+
+    <div id="component"><input placeholder="Enter your text" id="msg"><button onclick="send()" class="btn btn-info" id="send">Send</button> </div> 
+</center>
+</div>
+    <script src="teacher.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 0%, rgba(0,212,255,1) 100%);
+text-align: center;
+}
+#submit{
+    display: none;
+}
+#all_question{
+    display: block;
+}
+#result{
+    display: none;
+}
+
+table ,td, tr ,th{
+border: 2px solid black;
+}
+
+#user_name{
+    font-weight: bold !important;
+    display: inline-block;
+   font-family: monospace;
+}
+#welcome{
+    font-weight: bold;
+    font-size: 25px;
+    color: red;
+}
+#text_1{
+    color:rgb(110, 220, 20);
+    font-weight: 900;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing:0.1cm;
+}
+#live_test{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 20px;
+}
+#live_test_div ,#live_test_div_{
+    color:bisque;
+    font-weight: bold;
+    display: inline-block;
+}
+#complete_image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 20px;
+}
+#complete_test_div{
+    color:bisque;
+    font-weight: bold;
+    display: inline-block;
+}
+#chat_div{
+    width: 300px;
+    height: 450px;
+    background-color: antiquewhite;
+    opacity: 0.9;
+    padding: 5px;
+    margin: 20px;
+  
+}
+#display_teacher_name{
+    font-weight: bold;
+    text-align: center;
+    color: coral;
+}
+#chat_component{
+    margin-top: 410px;
+ 
+}
+#send{
+    margin-left: 10px;
+}
+table , tr, td, th{
+    padding: 5px !important;
+    background-color: bisque;
+    text-align: center;
+    border-style:ridge;
+    border: 2px ridge black;
+}
+.display_teacher_detail{
+    background-color: rgb(212, 167, 71);
+}
+#teacher_name_display{
+    background-color: rgb(219, 103, 49);
+}
+#teacher_sub_display{
+    background-color: coral;
+}
+
+#chat_div{
+    width: 300px;
+    height: 450px;
+    background-color: rgb(82, 74, 65);
+    opacity: 0.9;
+    padding: 5px;
+    margin: 20px;
+  color: black;
+  text-align: center;
+  overflow: scroll;
+  text-align: left;
+}
+#component{
+    background-color: aquamarine;
+    width: 300px;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 20px;
+    display: none;
+}
+#chat_div{
+    display: none;
+}
+#logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline;
+    margin-top: -14px;
+    margin-right: 10px;
+    padding: 20px;
+}
+.navbar-brand {
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+
+}
+#first{
+    margin-top: 80px;
+}
+
+
+
+
+#logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline;
+   margin-top: -20px;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+    margin-top: -10px;
+}
+#all_question{
+    background-color: beige;
+    max-width: 400px;
+    border-radius: 20px;
+}
+#Result_2 ,#Teacher ,#Test{
+    color:antiquewhite;
+    font-weight: bold;
+    
+}
